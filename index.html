@@ -15,7 +15,7 @@
 
     body {
       font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
-      background: #0b0f18;
+      background: #0f172a;
       color: #eef3fc;
       line-height: 1.5;
       overflow-x: hidden;
@@ -23,7 +23,7 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap');
 
-    /* ---------- animated canvas background ---------- */
+    /* ---------- animated canvas background (BRIGHTER & MORE ACTIVE) ---------- */
     #particleCanvas {
       position: fixed;
       top: 0;
@@ -31,7 +31,7 @@
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: radial-gradient(circle at 30% 40%, #14223a, #030614 90%);
+      background: linear-gradient(145deg, #1a2f4f, #0c1a30 80%);
       display: block;
     }
 
@@ -44,21 +44,21 @@
       z-index: 5;
     }
 
-    /* ----- glassmorphism + refined cards ----- */
+    /* ----- glassmorphism cards with brighter backdrop ----- */
     .glass-card {
-      background: rgba(18, 28, 45, 0.7);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border: 1px solid rgba(90, 140, 255, 0.2);
+      background: rgba(25, 40, 65, 0.65);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(120, 170, 255, 0.3);
       border-radius: 40px;
-      box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.6), inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+      box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.05);
       padding: 2.2rem 2.5rem;
       transition: transform 0.2s ease, border-color 0.2s;
     }
 
     .glass-card:hover {
-      border-color: rgba(90, 160, 255, 0.5);
-      background: rgba(22, 34, 54, 0.75);
+      border-color: rgba(100, 160, 255, 0.7);
+      background: rgba(35, 55, 85, 0.7);
     }
 
     /* ----- profile header with headshot ----- */
@@ -74,9 +74,9 @@
       width: 140px;
       height: 140px;
       border-radius: 50%;
-      background: linear-gradient(145deg, #3e66b3, #19305a);
+      background: linear-gradient(145deg, #5a7dbf, #2a4a8a);
       padding: 4px;
-      box-shadow: 0 20px 35px -5px #00000080, 0 0 0 2px #6699ff40;
+      box-shadow: 0 20px 35px -5px #00000080, 0 0 0 3px #80b0ff;
       flex-shrink: 0;
     }
 
@@ -85,26 +85,16 @@
       height: 100%;
       object-fit: cover;
       border-radius: 50%;
-      border: 3px solid #121f33;
-      background: #1e2b41; /* fallback */
+      border: 3px solid #1e2f4a;
+      background: #1e2f4a;
       display: block;
-    }
-
-    /* headshot from desktop.png? we embed as placeholder— use the actual headshot image (below) */
-    .headshot-placeholder {
-      background: #2a3d62;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 3.5rem;
-      color: #8bb1ff;
     }
 
     .title-section h1 {
       font-size: 3.5rem;
       font-weight: 700;
       letter-spacing: -0.02em;
-      background: linear-gradient(to right, #ffffff, #b6d0ff);
+      background: linear-gradient(to right, #ffffff, #c0d6ff);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -112,13 +102,13 @@
     }
 
     .title-tag {
-      background: rgba(40, 70, 130, 0.35);
+      background: rgba(50, 90, 170, 0.45);
       backdrop-filter: blur(4px);
       padding: 0.4rem 1.5rem;
       border-radius: 40px;
       font-size: 1.2rem;
       font-weight: 500;
-      border: 1px solid #4f7ad0;
+      border: 1px solid #6f9aff;
       display: inline-block;
       margin-top: 0.8rem;
     }
@@ -128,16 +118,16 @@
       display: flex;
       flex-wrap: wrap;
       gap: 1.8rem 2.8rem;
-      background: rgba(0, 8, 22, 0.6);
+      background: rgba(10, 25, 45, 0.7);
       backdrop-filter: blur(16px);
       border-radius: 80px;
       padding: 1rem 2.2rem;
       margin: 2rem 0 2.5rem;
-      border: 1px solid #2d4f86;
+      border: 1px solid #4f7fd0;
     }
 
     .contact-strip a, .contact-strip span {
-      color: #e2ecff;
+      color: #e8f0ff;
       text-decoration: none;
       display: flex;
       align-items: center;
@@ -147,11 +137,11 @@
     }
 
     .contact-strip a:hover {
-      color: #94bcff;
+      color: #aac5ff;
     }
 
     .contact-strip i {
-      color: #6093ff;
+      color: #7aa5ff;
       width: 22px;
       font-size: 1.2rem;
     }
@@ -165,30 +155,31 @@
     }
 
     .section-head i {
-      background: #20365a;
+      background: #26467a;
       padding: 14px;
       border-radius: 30px;
       font-size: 1.8rem;
-      color: #7fa9ff;
-      border: 1px solid #3865b0;
+      color: #9bbdff;
+      border: 1px solid #5080dd;
     }
 
     .section-head h2 {
       font-size: 2.4rem;
       font-weight: 600;
       letter-spacing: -0.01em;
+      color: #f0f5ff;
     }
 
     /* summary */
     .summary-large {
       font-size: 1.3rem;
-      color: #d1e2ff;
-      border-left: 5px solid #3f7eff;
+      color: #dae6ff;
+      border-left: 5px solid #5f8eff;
       padding-left: 2rem;
       margin: 0.5rem 0 1rem;
     }
 
-    /* skills board refined */
+    /* skills board */
     .skills-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -197,25 +188,25 @@
     }
 
     .skill-cell {
-      background: rgba(8, 18, 34, 0.7);
+      background: rgba(20, 38, 62, 0.7);
       backdrop-filter: blur(5px);
       border-radius: 28px;
       padding: 1.5rem 1.3rem;
-      border: 1px solid #2c4570;
+      border: 1px solid #3e6190;
     }
 
     .skill-cell h3 {
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #adc8ff;
+      color: #bed3ff;
       font-size: 1.2rem;
       margin-bottom: 1rem;
     }
 
     .skill-chip {
-      background: #1c2f4e;
-      border: 1px solid #385f99;
+      background: #253f64;
+      border: 1px solid #5280cc;
       padding: 0.3rem 1.2rem;
       border-radius: 40px;
       font-size: 0.9rem;
@@ -227,7 +218,7 @@
     /* experience entries */
     .exp-entry {
       margin-bottom: 2.2rem;
-      border-bottom: 1px dashed #314d79;
+      border-bottom: 1px dashed #3f6190;
       padding-bottom: 1.8rem;
     }
 
@@ -245,25 +236,25 @@
     .exp-head h3 {
       font-size: 1.7rem;
       font-weight: 650;
-      color: #ebf2ff;
+      color: #f0f6ff;
     }
 
     .exp-company {
-      color: #90b4ff;
+      color: #adc9ff;
       margin-left: 8px;
       font-size: 1.2rem;
     }
 
     .exp-date {
-      background: #18263f;
-      border: 1px solid #3861a5;
+      background: #1f3a62;
+      border: 1px solid #4f7fd0;
       padding: 0.2rem 1.2rem;
       border-radius: 30px;
       font-size: 0.9rem;
     }
 
     .exp-location {
-      color: #98b5e9;
+      color: #b8d0ff;
       margin: 0.3rem 0 1rem;
     }
 
@@ -275,16 +266,16 @@
       display: flex;
       gap: 14px;
       margin-bottom: 0.8rem;
-      color: #d1e1ff;
+      color: #deecff;
     }
 
     .exp-desc li i {
-      color: #5d8cff;
+      color: #7aa9ff;
       font-size: 1.1rem;
       margin-top: 3px;
     }
 
-    /* achievement cards (brilliant) */
+    /* achievement cards */
     .achievement-deck {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -293,26 +284,26 @@
     }
 
     .achieve-item {
-      background: rgba(20, 35, 60, 0.6);
+      background: rgba(30, 52, 82, 0.6);
       backdrop-filter: blur(5px);
       padding: 2rem 1.5rem;
       border-radius: 32px;
-      border: 1px solid #304e7a;
+      border: 1px solid #4470b0;
       transition: 0.25s;
     }
 
     .achieve-item:hover {
-      background: rgba(33, 55, 95, 0.7);
-      border-color: #6f9aff;
+      background: rgba(45, 75, 120, 0.7);
+      border-color: #8bb4ff;
       transform: translateY(-6px);
     }
 
     .achieve-item i {
       font-size: 2.4rem;
-      background: #1b3152;
+      background: #25487a;
       padding: 16px;
       border-radius: 24px;
-      color: #8db6ff;
+      color: #aac7ff;
       margin-bottom: 1.5rem;
     }
 
@@ -324,7 +315,7 @@
 
     /* education */
     .edu-wrap {
-      background: rgba(10, 22, 40, 0.7);
+      background: rgba(20, 40, 68, 0.7);
       backdrop-filter: blur(8px);
       border-radius: 40px;
       padding: 1.5rem 2.5rem;
@@ -332,7 +323,7 @@
       flex-wrap: wrap;
       align-items: center;
       gap: 2.5rem;
-      border: 1px solid #2d5080;
+      border: 1px solid #3e6bb0;
     }
 
     .edu-wrap strong {
@@ -343,7 +334,7 @@
     .footer {
       margin-top: 4rem;
       text-align: center;
-      color: #95afd6;
+      color: #b0c8f5;
     }
 
     @media (max-width: 700px) {
@@ -357,25 +348,16 @@
 </head>
 <body>
 
-  <!-- animated particle canvas background -->
+  <!-- animated particle canvas background (BRIGHTER & MORE ACTIVE) -->
   <canvas id="particleCanvas"></canvas>
 
   <div class="container">
-    <!-- profile header with headshot (real image from desktop.png? we use the headshot image directly) -->
+    <!-- profile header with headshot -->
     <div class="glass-card" style="padding: 2rem 2.2rem;">
       <div class="profile-row">
-        <!-- headshot: from the prompt "headshot is below." we embed actual image (inline) -->
         <div class="avatar-frame">
-          <!-- headshot image (you said "headshot is below" – we embed as if it's available) 
-               I'll use a font-based fallback but replace with actual headshot img. 
-               For authenticity we put an img with src="headshot.jpg" but since file not present,
-               we use a stylish data-icon; but you asked to add headshot: I'll use an <img> with placeholder
-               but I'll simulate a real headshot using a background gradient + icon.
-               For the purpose of demonstration I embed an elegant silhouette with icon – 
-               but you can replace "headshot.jpg" with the actual image. -->
-          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='45' r='30' fill='%232a3f6e'/%3E%3Ccircle cx='50' cy='40' r='12' fill='%23cfdfff'/%3E%3Cpath d='M20 85 Q50 100, 80 85' stroke='%23fff' stroke-width='4' fill='none' /%3E%3C/svg%3E"
-               alt="Rosauro headshot" style="background: #1f3460;">
-          <!-- Replace the src with your actual headshot, e.g. "headshot.jpg" -->
+          <!-- REPLACE WITH YOUR ACTUAL HEADSHOT FILE -->
+          <img src="headshot.jpg" alt="Rosauro Matibag headshot" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'200\' height=\'200\' viewBox=\'0 0 100 100\'%3E%3Ccircle cx=\'50\' cy=\'45\' r=\'30\' fill=\'%233a5a9a\'/%3E%3Ccircle cx=\'50\' cy=\'40\' r=\'12\' fill=\'%23cfdfff\'/%3E%3Cpath d=\'M20 85 Q50 100, 80 85\' stroke=\'%23fff\' stroke-width=\'4\' fill=\'none\' /%3E%3C/svg%3E'">
         </div>
         <div class="title-section">
           <h1>Rosauro Matibag</h1>
@@ -383,7 +365,7 @@
         </div>
       </div>
 
-      <!-- contact strip inside same card for elegance -->
+      <!-- contact strip -->
       <div class="contact-strip">
         <span><i class="fas fa-map-marker-alt"></i> Alaminos, Laguna</span>
         <span><i class="fas fa-phone-alt"></i> +63 (975) 291-5786</span>
@@ -403,7 +385,7 @@
       </div>
     </div>
 
-    <!-- technical skills refined -->
+    <!-- technical skills -->
     <div class="glass-card" style="margin-top: 2.2rem;">
       <div class="section-head">
         <i class="fas fa-code"></i>
@@ -477,11 +459,11 @@
     <!-- education + availability -->
     <div class="glass-card" style="margin-top: 2.2rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;">
       <div class="edu-wrap">
-        <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #7196f0;"></i>
-        <div><strong>BS Computer Science</strong> · University of Science and Technology, Hong Kong <br><span style="color: #a6bef5;">class of 2013</span></div>
+        <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: #8aadff;"></i>
+        <div><strong>BS Computer Science</strong> · University of Science and Technology, Hong Kong <br><span style="color: #c0d4ff;">class of 2013</span></div>
       </div>
-      <div style="color: #c6d9ff; font-size: 1.2rem; padding: 0 1rem;">
-        <i class="fas fa-check-circle" style="color: #3f8aff;"></i> available for remote
+      <div style="color: #dae7ff; font-size: 1.2rem; padding: 0 1rem;">
+        <i class="fas fa-check-circle" style="color: #5f9eff;"></i> available for remote
       </div>
     </div>
 
@@ -490,7 +472,7 @@
     </div>
   </div>
 
-  <!-- animation script for particle background -->
+  <!-- animation script for particle background (MORE ACTIVE) -->
   <script>
     (function() {
       const canvas = document.getElementById('particleCanvas');
@@ -499,16 +481,16 @@
       let particles = [];
 
       function initParticles() {
-        const particleCount = 70;
+        const particleCount = 120; // MORE PARTICLES
         particles = [];
         for (let i = 0; i < particleCount; i++) {
           particles.push({
             x: Math.random() * width,
             y: Math.random() * height,
-            radius: Math.random() * 3 + 1.5,
-            speedX: (Math.random() - 0.5) * 0.35,
-            speedY: (Math.random() - 0.5) * 0.2,
-            color: `rgba(100, 160, 255, ${Math.random() * 0.2 + 0.1})`
+            radius: Math.random() * 4 + 1.8, // SLIGHTLY LARGER
+            speedX: (Math.random() - 0.5) * 0.6, // FASTER
+            speedY: (Math.random() - 0.5) * 0.4, // FASTER
+            color: `rgba(130, 190, 255, ${Math.random() * 0.4 + 0.2})` // BRIGHTER
           });
         }
       }
@@ -523,8 +505,11 @@
 
       function drawParticles() {
         ctx.clearRect(0, 0, width, height);
-        // soft trails
-        ctx.fillStyle = '#0b101e';
+        // Lighter background gradient
+        const gradient = ctx.createLinearGradient(0, 0, width, height);
+        gradient.addColorStop(0, '#142b48');
+        gradient.addColorStop(1, '#1d3457');
+        ctx.fillStyle = gradient;
         ctx.fillRect(0, 0, width, height);
         
         for (let p of particles) {
@@ -533,15 +518,15 @@
           ctx.fillStyle = p.color;
           ctx.fill();
           
-          // occasional connection lines (subtle)
+          // MORE CONNECTION LINES
           for (let other of particles) {
             const dx = p.x - other.x;
             const dy = p.y - other.y;
             const dist = Math.sqrt(dx*dx + dy*dy);
-            if (dist < 120 && dist > 5) {
+            if (dist < 150 && dist > 5) { // INCREASED DISTANCE
               ctx.beginPath();
-              ctx.strokeStyle = `rgba(80, 150, 255, 0.08)`;
-              ctx.lineWidth = 0.5;
+              ctx.strokeStyle = `rgba(100, 170, 255, 0.12)`; // MORE VISIBLE
+              ctx.lineWidth = 0.8; // THICKER LINES
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(other.x, other.y);
               ctx.stroke();
@@ -569,8 +554,5 @@
       drawParticles();
     })();
   </script>
-
-  <!-- headshot image real: we used an inline SVG but you can replace src with actual image.
-       For true headshot, replace src="headshot.jpg" inside .avatar-frame img -->
 </body>
 </html>
